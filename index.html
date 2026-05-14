@@ -22,7 +22,10 @@
     <!-- HERO -->
     <section class="hero">
   <div class="orb orb-large"></div>
-  <div class="orb orb-small"></div>
+<div class="orb orb-small"></div>
+<div class="orb orb-mid"></div>
+<div class="orb orb-tiny"></div>
+<div class="orb orb-right"></div>
 
   <div class="hero-text">
     <p class="status">Available for freelance</p>
@@ -49,22 +52,21 @@
 
     <div class="robot-wrap">
       <model-viewer
-        id="robotModel"
-        class="robot-model"
-        src="assets/robot-head.glb"
-        autoplay
-        disable-zoom
-        interaction-prompt="none"
-        camera-orbit="0deg 75deg 20m"
-        field-of-view="18deg"
-        exposure="1"
-        shadow-intensity="0"
-        one-mapping="commerce"
-        environment-intensity="1.2"
-        tone-mapping="commerce"
-        environment-image="neutral">
-        
-      </model-viewer>
+  id="robotModel"
+  class="robot-model"
+  src="assets/robot-head.glb"
+  autoplay
+  disable-zoom
+  interaction-prompt="none"
+  camera-orbit="0deg 75deg 20m"
+  field-of-view="18deg"
+  exposure="0.6"
+  shadow-intensity="1"
+  shadow-softness="0.8"
+  environment-intensity="0.4"
+  tone-mapping="commerce"
+  environment-image="https://modelviewer.dev/shared-assets/environments/moon_1k.hdr">
+</model-viewer>
     </div>
   </div>
 </section>
