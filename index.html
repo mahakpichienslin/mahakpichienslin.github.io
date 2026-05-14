@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Siln Mahakpichien</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="nav">
+    <div class="logo">PORTFOLIO</div>
+    <nav>
+      <a href="#work">WORK</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#about">ABOUT</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+  <div class="orb orb-large"></div>
+  <div class="orb orb-small"></div>
+
+  <div class="hero-text">
+    <p class="status">Available for freelance</p>
+    <h1>
+      3D. Web.<br />
+      <span>Systems.</span><br />
+      Design.
+    </h1>
+
+    <p class="intro">
+      I design interactive technical systems for industrial products.
+      I build interactive 3D experiences, automation systems,
+      and brand identities — all from one person.
+    </p>
+
+    <div class="buttons">
+      <a href="#work" class="btn primary">VIEW WORK</a>
+      <a href="#contact" class="btn secondary">GET IN TOUCH</a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <img src="assets/neural.png" class="neural" alt="" />
+
+    <div class="robot-wrap">
+      <model-viewer
+        id="robotModel"
+        class="robot-model"
+        src="assets/robot-head.glb"
+        autoplay
+        disable-zoom
+        interaction-prompt="none"
+        camera-orbit="0deg 75deg 20m"
+        field-of-view="18deg"
+        exposure="1"
+        shadow-intensity="0"
+        one-mapping="commerce"
+        environment-intensity="1.2"
+        tone-mapping="commerce"
+        environment-image="neutral">
+        
+      </model-viewer>
+    </div>
+  </div>
+</section>
+
+    <!-- WORK -->
+    <section id="work" class="section reveal">
+      <h2>Selected Works</h2>
+
+      <div class="project-grid">
+        <a class="project-card" href="case-study-bse.html">
+          <p><span>001</span> — Engineering / Web</p>
+          <h3>BSE Electronic</h3>
+          <p>Full product website with real-time 3D viewer, automated product selector, and complete UX/UI system for Thailand’s leading aviation obstruction light manufacturer.</p>
+          <div class="tags">
+            <span>Blender 3D</span><span>GLB/WebGL</span><span>UX/UI</span><span>Engineering</span>
+          </div>
+          <small>View Case Study →</small>
+        </a>
+
+        <a class="project-card" href="#">
+          <p><span>002</span> — Brand / Product</p>
+          <h3>Rekha Ganita</h3>
+          <p>Full brand identity and e-commerce for an artisan reed diffuser brand inspired by 8 celestial archetypes.</p>
+          <div class="tags">
+            <span>Brand Identity</span><span>GLB/WebGL</span><span>UX/UI</span><span>E-commerce</span>
+          </div>
+          <small>View Case Study →</small>
+        </a>
+
+        <a class="project-card" href="#">
+          <p><span>003</span> — Training / Interactive</p>
+          <h3>Aviation Control Training System</h3>
+          <p>A Unity-based interactive 3D training system for aviation obstruction light control cabinets.</p>
+          <div class="tags">
+            <span>Blender 3D</span><span>Unity3D</span><span>Engineering</span>
+          </div>
+          <small>View Case Study →</small>
+        </a>
+
+        <a class="project-card" href="#">
+          <p><span>004</span> — Automation / AI</p>
+          <h3>AI Business Systems</h3>
+          <p>Custom n8n automation workflows for SMEs — replacing repetitive admin work with intelligent pipelines.</p>
+          <div class="tags">
+            <span>n8n</span><span>AI / LLM</span><span>LINE API</span><span>GPT</span>
+          </div>
+          <small>View Case Study →</small>
+        </a>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section reveal">
+      <h2>Capabilities</h2>
+      <div class="capabilities">
+        <div>3D & Visualization<br><span>Blender · GLB · Model Viewer</span></div>
+        <div>Web Development<br><span>HTML · CSS · JS · Wix</span></div>
+        <div>Game & Interactive<br><span>Unity · C# · Real-time Systems</span></div>
+        <div>Automation & AI<br><span>n8n · OpenAI API · Workflow</span></div>
+        <div>UX / UI Design<br><span>Interface Design · UX</span></div>
+        <div>Engineering<br><span>Electrical · Industrial</span></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about reveal">
+      <h2>About</h2>
+
+      <div class="about-grid">
+        <div>
+          <p>
+            I'm a creative engineer based in Bangkok, Thailand.
+            With a background in electrical engineering, I focus on turning
+            complex systems into interactive digital experiences.
+          </p>
+
+          <p>
+            I work across 3D, web, automation, and technical visualization —
+            bridging engineering and design.
+          </p>
+
+          <p>
+            Most of my work is built to help people understand technical
+            products more clearly and interact with them more naturally.
+          </p>
+        </div>
+
+        <div class="about-list">
+          <p>Disciplines mastered simultaneously</p>
+          <p>Live products built end-to-end</p>
+          <p>Engineering + Interactive Systems</p>
+          <p>Real-world industrial experience</p>
+          <p>7 years in electrical engineering</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact reveal">
+      <h2>Contact</h2>
+      <h3>Let's build something<br>worth building.</h3>
+      <p>Looking for someone who understands both the technical and the visual? Let's talk.</p>
+
+      <a href="mailto:mahakpichien.slin@gmail.com" class="email-box">
+        mahakpichien.slin@gmail.com <span>Email →</span>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Siln MahakPichien — Bangkok, Thailand</p>
+    <p>Available for new projects</p>
+  </footer>
+
+  <script type="module"
+src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+</script>
+
+  <script src="script.js"></script>
+</body>
+</html>
