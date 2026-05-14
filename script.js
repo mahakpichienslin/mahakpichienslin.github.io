@@ -18,12 +18,12 @@ const robotModel = document.querySelector("#robotModel");
 
 document.addEventListener("mousemove", (e) => {
   if (!robotModel) return;
+  
+  // ไม่ทำงานบนมือถือ
+  if ('ontouchstart' in window) return;
 
   const x = -(e.clientX / window.innerWidth - 0.5) * 25;
   const y = (e.clientY / window.innerHeight - 0.5) * 12;
 
-  robotModel.setAttribute(
-    "camera-orbit",
-    `${x}deg ${75 - y}deg 15m`
-  );
+  robotModel.setAttribute("camera-orbit", `${x}deg ${75 - y}deg 15m`);
 });

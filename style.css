@@ -598,3 +598,14 @@ model-viewer {
   --progress-bar-color: transparent;
   --progress-bar-height: 0px;
 }
+
+@media (max-width: 900px) {
+  .hero-visual {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .neural {
+    display: none;
+  }
+}
