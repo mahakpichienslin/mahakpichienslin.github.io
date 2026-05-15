@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- ============================================================
+     index.html — Portfolio | Siln Mahakpichien
+     ============================================================
+     INDEX
+     1.  Head (Meta, Fonts, CSS)
+     2.  Navigation
+     3.  Hero Section (Text + 3D Robot)
+     4.  Work Section (Project Cards)
+     5.  Skills Section (Capabilities Grid)
+     6.  About Section
+     7.  Contact Section
+     8.  Footer
+     9.  Scripts
+     ============================================================ -->
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio | Siln Mahakpichien</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Inter (body) + Space Grotesk (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+
+  <!-- ============================================================
+       2. NAVIGATION
+       Fixed navbar อยู่ด้านบนตลอดเวลา
+       ============================================================ -->
   <header class="nav">
     <div class="logo">PORTFOLIO</div>
     <nav>
@@ -22,108 +45,146 @@
     </nav>
   </header>
 
+
   <main>
-    <!-- HERO -->
+
+    <!-- ============================================================
+         3. HERO SECTION
+         แบ่งเป็น 2 ส่วน: ซ้าย = ข้อความ, ขวา = 3D Robot
+         Orb = วงกลมเรืองแสง CSS ลอยอยู่ใน background
+         ============================================================ -->
     <section class="hero">
-  <div class="orb orb-large"></div>
-<div class="orb orb-small"></div>
-<div class="orb orb-mid"></div>
-<div class="orb orb-tiny"></div>
-<div class="orb orb-right"></div>
 
-  <div class="hero-text">
-    <p class="status">Available for freelance</p>
-    <h1>
-      3D. Web.<br />
-      <span>Systems.</span><br />
-      Design.
-    </h1>
+      <!-- Orb decorations (CSS-only, ไม่มีรูป) -->
+      <div class="orb orb-large"></div>
+      <div class="orb orb-small"></div>
+      <div class="orb orb-mid"></div>
+      <div class="orb orb-tiny"></div>
+      <div class="orb orb-right"></div>
 
-    <p class="intro">
-      I design interactive technical systems for industrial products.
-      I build interactive 3D experiences, automation systems,
-      and brand identities — all from one person.
-    </p>
+      <!-- ฝั่งซ้าย: ข้อความหลัก -->
+      <div class="hero-text">
+        <p class="status">Available for freelance</p>
+        <h1>
+          3D. Web.<br />
+          <span>Systems.</span><br />
+          Design.
+        </h1>
+        <p class="intro">
+          I design interactive technical systems for industrial products.
+          I build interactive 3D experiences, automation systems,
+          and brand identities — all from one person.
+        </p>
+        <div class="buttons">
+          <a href="#work" class="btn primary">VIEW WORK</a>
+          <a href="#contact" class="btn secondary">GET IN TOUCH</a>
+        </div>
+      </div>
 
-    <div class="buttons">
-      <a href="#work" class="btn primary">VIEW WORK</a>
-      <a href="#contact" class="btn secondary">GET IN TOUCH</a>
-    </div>
-  </div>
+      <!-- ฝั่งขวา: 3D Robot Model -->
+      <div class="hero-visual">
 
-  <div class="hero-visual">
-    <img src="assets/neural.png" class="neural" alt="" />
+        <!-- Neural network background image (decoration) -->
+        <img src="assets/neural.png" class="neural" alt="" />
 
-    <div class="robot-wrap">
-      <model-viewer
-  id="robotModel"
-  class="robot-model"
-  src="assets/robot-head.glb"
-  autoplay
-  disable-zoom
-  interaction-prompt="none"
-  camera-orbit="0deg 75deg 20m"
-  field-of-view="18deg"
-  exposure="0.6"
-  shadow-intensity="1"
-  shadow-softness="0.8"
-  environment-intensity="0.4"
-  tone-mapping="commerce"
-  touch-action="none"
-  environment-image="https://modelviewer.dev/shared-assets/environments/moon_1k.hdr">
-</model-viewer>
-    </div>
-  </div>
-</section>
+        <!-- Robot wrapper: มี glow filter + float animation -->
+        <div class="robot-wrap">
+          <model-viewer
+            id="robotModel"
+            class="robot-model"
+            src="assets/robot-head-v2.glb"
+            autoplay
+            disable-zoom
+            interaction-prompt="none"
+            touch-action="none"
+            camera-orbit="0deg 75deg 20m"
+            field-of-view="18deg"
+            exposure="0.6"
+            shadow-intensity="1"
+            shadow-softness="0.8"
+            environment-intensity="0.4"
+            tone-mapping="commerce"
+            environment-image="https://modelviewer.dev/shared-assets/environments/moon_1k.hdr">
+          </model-viewer>
+        </div>
 
-    <!-- WORK -->
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         4. WORK SECTION
+         แสดง project card 4 ชิ้น แบบ 2x2 grid
+         แต่ละ card link ไปหน้า case study
+         ============================================================ -->
     <section id="work" class="section reveal">
       <h2>Selected Works</h2>
 
       <div class="project-grid">
+
+        <!-- Project 001 -->
         <a class="project-card" href="case-study-bse.html">
           <p><span>001</span> — Engineering / Web</p>
           <h3>BSE Electronic</h3>
-          <p>Full product website with real-time 3D viewer, automated product selector, and complete UX/UI system for Thailand’s leading aviation obstruction light manufacturer.</p>
+          <p>Full product website with real-time 3D viewer, automated product selector, and complete UX/UI system for Thailand's leading aviation obstruction light manufacturer.</p>
           <div class="tags">
-            <span>Blender 3D</span><span>GLB/WebGL</span><span>UX/UI</span><span>Engineering</span>
+            <span>Blender 3D</span>
+            <span>GLB/WebGL</span>
+            <span>UX/UI</span>
+            <span>Engineering</span>
           </div>
           <small>View Case Study →</small>
         </a>
 
+        <!-- Project 002 -->
         <a class="project-card" href="#">
           <p><span>002</span> — Brand / Product</p>
           <h3>Rekha Ganita</h3>
           <p>Full brand identity and e-commerce for an artisan reed diffuser brand inspired by 8 celestial archetypes.</p>
           <div class="tags">
-            <span>Brand Identity</span><span>GLB/WebGL</span><span>UX/UI</span><span>E-commerce</span>
+            <span>Brand Identity</span>
+            <span>GLB/WebGL</span>
+            <span>UX/UI</span>
+            <span>E-commerce</span>
           </div>
           <small>View Case Study →</small>
         </a>
 
+        <!-- Project 003 -->
         <a class="project-card" href="#">
           <p><span>003</span> — Training / Interactive</p>
           <h3>Aviation Control Training System</h3>
           <p>A Unity-based interactive 3D training system for aviation obstruction light control cabinets.</p>
           <div class="tags">
-            <span>Blender 3D</span><span>Unity3D</span><span>Engineering</span>
+            <span>Blender 3D</span>
+            <span>Unity3D</span>
+            <span>Engineering</span>
           </div>
           <small>View Case Study →</small>
         </a>
 
+        <!-- Project 004 -->
         <a class="project-card" href="#">
           <p><span>004</span> — Automation / AI</p>
           <h3>AI Business Systems</h3>
           <p>Custom n8n automation workflows for SMEs — replacing repetitive admin work with intelligent pipelines.</p>
           <div class="tags">
-            <span>n8n</span><span>AI / LLM</span><span>LINE API</span><span>GPT</span>
+            <span>n8n</span>
+            <span>AI / LLM</span>
+            <span>LINE API</span>
+            <span>GPT</span>
           </div>
           <small>View Case Study →</small>
         </a>
+
       </div>
     </section>
 
-    <!-- SKILLS -->
+
+    <!-- ============================================================
+         5. SKILLS SECTION
+         Grid 6 ช่อง แสดง capability แต่ละด้าน
+         ============================================================ -->
     <section id="skills" class="section reveal">
       <h2>Capabilities</h2>
       <div class="capabilities">
@@ -136,23 +197,26 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
+
+    <!-- ============================================================
+         6. ABOUT SECTION
+         ซ้าย = paragraph แนะนำตัว
+         ขวา = list ความสามารถ/ประสบการณ์
+         ============================================================ -->
     <section id="about" class="section about reveal">
       <h2>About</h2>
-
       <div class="about-grid">
+
         <div>
           <p>
             I'm a creative engineer based in Bangkok, Thailand.
             With a background in electrical engineering, I focus on turning
             complex systems into interactive digital experiences.
           </p>
-
           <p>
             I work across 3D, web, automation, and technical visualization —
             bridging engineering and design.
           </p>
-
           <p>
             Most of my work is built to help people understand technical
             products more clearly and interact with them more naturally.
@@ -166,30 +230,46 @@
           <p>Real-world industrial experience</p>
           <p>7 years in electrical engineering</p>
         </div>
+
       </div>
     </section>
 
-    <!-- CONTACT -->
+
+    <!-- ============================================================
+         7. CONTACT SECTION
+         Email แบบ clickable box
+         ============================================================ -->
     <section id="contact" class="section contact reveal">
       <h2>Contact</h2>
       <h3>Let's build something<br>worth building.</h3>
       <p>Looking for someone who understands both the technical and the visual? Let's talk.</p>
-
       <a href="mailto:mahakpichien.slin@gmail.com" class="email-box">
         mahakpichien.slin@gmail.com <span>Email →</span>
       </a>
     </section>
+
   </main>
 
+
+  <!-- ============================================================
+       8. FOOTER
+       ============================================================ -->
   <footer>
     <p>© 2026 Siln MahakPichien — Bangkok, Thailand</p>
     <p>Available for new projects</p>
   </footer>
 
-  <script type="module"
-src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
-</script>
 
+  <!-- ============================================================
+       9. SCRIPTS
+       model-viewer: โหลดก่อน script.js เสมอ
+       ============================================================ -->
+
+  <!-- model-viewer library (Google) -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <!-- Custom JS: scroll reveal + robot mousemove -->
   <script src="script.js"></script>
+
 </body>
 </html>
