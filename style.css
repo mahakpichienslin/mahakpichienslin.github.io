@@ -411,8 +411,8 @@ footer p:last-child {
   pointer-events: none;
 
   filter:
-    drop-shadow(0 0 20px rgba(180,255,120,0.15))
-    drop-shadow(0 0 60px rgba(180,255,120,0.08));
+    drop-shadow(0 0 40px rgba(181, 255, 120, 0.308))
+    drop-shadow(0 0 90px rgba(181, 255, 120, 0.267));
 
   animation: floatBot 5s ease-in-out infinite;
 }
