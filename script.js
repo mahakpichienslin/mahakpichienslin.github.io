@@ -63,3 +63,28 @@ if (slider) {
     slider.scrollLeft = scrollLeft - walk;
   });
 }
+
+window.addEventListener("load", () => {
+  if (!robotModel) return;
+
+  const introOrbits = [
+    "18deg 75deg 20m",
+    "-18deg 75deg 20m",
+    "12deg 75deg 20m",
+    "-8deg 75deg 20m",
+    "0deg 75deg 20m"
+  ];
+
+  let index = 0;
+
+  const playIntroLook = () => {
+    if (index >= introOrbits.length) return;
+
+    robotModel.setAttribute("camera-orbit", introOrbits[index]);
+    index++;
+
+    setTimeout(playIntroLook, 320);
+  };
+
+  setTimeout(playIntroLook, 600);
+});
