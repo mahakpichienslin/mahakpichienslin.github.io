@@ -816,13 +816,30 @@ footer p:last-child {
    ปรับ layout จาก 2 คอลัมน์เป็น 1 คอลัมน์
    ============================================================ */
 @media (max-width: 900px) {
+
   .robot-enter {
-    width: 320px;
-    height: 320px;
-    left: 50%;
-    top: 20px;
-    transform: translateX(-50%);
+    position: relative;
+    width: 100%;
+    max-width: 340px;
+    height: 340px;
+
+    left: auto;
+    top: auto;
+
+    margin: 40px auto 0;
+
+    transform: none;
   }
+
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-top: 20px;
+  }
+
+}
 
   .robot-wrap {
     animation: floatBotMobile 5s ease-in-out infinite;
