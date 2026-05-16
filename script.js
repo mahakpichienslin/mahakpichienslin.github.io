@@ -16,69 +16,26 @@ window.addEventListener("load", revealOnScroll);
 
 const robotModel = document.querySelector("#robotModel");
 
-document.addEventListener("mousemove", (e) => {
-  if (!robotModel) return;
-  
-  // ไม่ทำงานบนมือถือ
-  if ('ontouchstart' in window) return;
-
-  const x = -(e.clientX / window.innerWidth - 0.5) * 25;
-  const y = (e.clientY / window.innerHeight - 0.5) * 12;
-
-  robotModel.setAttribute("camera-orbit", `${x}deg ${75 - y}deg 15m`);
-});
-
-const slider = document.querySelector(".screenshots-track");
-
-if (slider) {
-  let isDown = false;
-  let startX;
-  let scrollLeft;
-
-  slider.addEventListener("mousedown", (e) => {
-    isDown = true;
-    slider.classList.add("dragging");
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-  });
-
-  slider.addEventListener("mouseleave", () => {
-    isDown = false;
-    slider.classList.remove("dragging");
-  });
-
-  slider.addEventListener("mouseup", () => {
-    isDown = false;
-    slider.classList.remove("dragging");
-  });
-
-  slider.addEventListener("mousemove", (e) => {
-    if (!isDown) return;
-
-    e.preventDefault();
-
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 0.8;
-
-    slider.scrollLeft = scrollLeft - walk;
-  });
-}
+let introPlaying = true;
 
 window.addEventListener("load", () => {
   if (!robotModel) return;
 
   const introOrbits = [
-    "18deg 75deg 20m",
-    "-18deg 75deg 20m",
-    "12deg 75deg 20m",
-    "-8deg 75deg 20m",
-    "0deg 75deg 20m"
+    "18deg 75deg 15m",
+    "-18deg 75deg 15m",
+    "12deg 75deg 15m",
+    "-8deg 75deg 15m",
+    "0deg 75deg 15m"
   ];
 
   let index = 0;
 
   const playIntroLook = () => {
-    if (index >= introOrbits.length) return;
+    if (index >= introOrbits.length) {
+      introPlaying = false;
+      return;
+    }
 
     robotModel.setAttribute("camera-orbit", introOrbits[index]);
     index++;
@@ -87,4 +44,15 @@ window.addEventListener("load", () => {
   };
 
   setTimeout(playIntroLook, 600);
+});
+
+document.addEventListener("mousemove", (e) => {
+  if (!robotModel) return;
+  if (introPlaying) return;
+  if ("ontouchstart" in window) return;
+
+  const x = -(e.clientX / window.innerWidth - 0.5) * 25;
+  const y = (e.clientY / window.innerHeight - 0.5) * 12;
+
+  robotModel.setAttribute("camera-orbit", `${x}deg ${75 - y}deg 15m`);
 });
