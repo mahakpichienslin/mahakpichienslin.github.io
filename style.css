@@ -301,7 +301,39 @@ h1, h2, h3, .logo {
   filter:
     drop-shadow(0 0 40px rgba(181, 255, 120, 0.31))
     drop-shadow(0 0 90px rgba(181, 255, 120, 0.27));
-  animation: floatBot 5s ease-in-out infinite;
+  transform-origin: center center;
+
+animation:
+  robotEnter 1.4s cubic-bezier(.16, 1, .3, 1) forwards,
+  floatBot 5s ease-in-out infinite 1.4s;
+}
+
+@keyframes robotEnter {
+  0% {
+    opacity: 0;
+    transform: scale(0.45) translateX(-30px) rotate(-2deg);
+    filter: blur(10px);
+  }
+
+  35% {
+    opacity: 1;
+    transform: scale(1.08) translateX(10px) rotate(1.5deg);
+    filter: blur(2px);
+  }
+
+  55% {
+    transform: scale(0.96) translateX(-8px) rotate(-1deg);
+  }
+
+  75% {
+    transform: scale(1.02) translateX(4px) rotate(0.5deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateX(0) rotate(0deg);
+    filter: blur(0);
+  }
 }
 
 /* ตัว model-viewer element */
