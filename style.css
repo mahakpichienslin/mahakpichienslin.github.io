@@ -839,8 +839,6 @@ footer p:last-child {
     margin-top: 20px;
   }
 
-}
-
   .robot-wrap {
     animation: floatBotMobile 5s ease-in-out infinite;
   }
@@ -893,7 +891,7 @@ footer p:last-child {
   .hero-visual {
     height: 520px;
     margin-top: 30px;
-    overflow: hidden;
+   overflow: visible;
     width: 100%;
   }
 
