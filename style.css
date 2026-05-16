@@ -995,3 +995,10 @@ footer p:last-child {
   }
 }
 
+.glitch-title span {
+  color: var(--text);
+}
+
+.glitch-title .accent {
+  color: var(--accent);
+}
