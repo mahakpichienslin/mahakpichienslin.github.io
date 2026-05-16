@@ -141,7 +141,11 @@ h1, h2, h3, .logo {
   letter-spacing: -0.05em;
 }
 
-.hero h1 span {
+.hero h1 > span:not(.accent) {
+  color: var(--text);
+}
+
+.hero h1 .accent {
   color: var(--accent);
 }
 
@@ -939,10 +943,15 @@ footer p:last-child {
 
 .glitch-title span {
   display: block;
+  color: var(--text);
   opacity: 0;
   transform: translateY(28px);
   filter: blur(8px);
   animation: signalReveal 0.9s ease forwards;
+}
+
+.glitch-title .accent {
+  color: var(--accent);
 }
 
 .glitch-title span:nth-child(1) {
@@ -995,10 +1004,3 @@ footer p:last-child {
   }
 }
 
-.glitch-title span {
-  color: var(--text);
-}
-
-.glitch-title .accent {
-  color: var(--accent);
-}
