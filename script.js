@@ -91,3 +91,24 @@ if (slider) {
     slider.classList.remove("dragging");
   });
 }
+
+document.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    const href = link.getAttribute("href");
+
+    if (
+      !href ||
+      href.startsWith("#") ||
+      link.target === "_blank" ||
+      href.startsWith("mailto:")
+    ) return;
+
+    e.preventDefault();
+
+    document.body.classList.add("page-exit");
+
+    setTimeout(() => {
+      window.location.href = href;
+    }, 450);
+  });
+});
