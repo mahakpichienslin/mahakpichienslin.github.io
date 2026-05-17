@@ -742,6 +742,8 @@ footer p:last-child {
 
 .screenshots-track.dragging {
   cursor: grabbing;
+  scroll-behavior: auto;
+  scroll-snap-type: none;
 }
 
 .shot {
@@ -761,6 +763,8 @@ footer p:last-child {
   object-fit: cover;
   object-position: center top;
   pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .slider-hint {
