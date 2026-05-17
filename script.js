@@ -56,3 +56,38 @@ document.addEventListener("mousemove", (e) => {
 
   robotModel.setAttribute("camera-orbit", `${x}deg ${75 - y}deg 15m`);
 });
+
+const slider = document.querySelector(".screenshots-track");
+
+if (slider) {
+  let isDown = false;
+  let startX = 0;
+  let scrollLeft = 0;
+
+  slider.addEventListener("pointerdown", (e) => {
+    isDown = true;
+    slider.classList.add("dragging");
+
+    startX = e.clientX;
+    scrollLeft = slider.scrollLeft;
+
+    slider.setPointerCapture(e.pointerId);
+  });
+
+  slider.addEventListener("pointermove", (e) => {
+    if (!isDown) return;
+
+    const walk = (e.clientX - startX) * 1.2;
+    slider.scrollLeft = scrollLeft - walk;
+  });
+
+  slider.addEventListener("pointerup", () => {
+    isDown = false;
+    slider.classList.remove("dragging");
+  });
+
+  slider.addEventListener("pointercancel", () => {
+    isDown = false;
+    slider.classList.remove("dragging");
+  });
+}
