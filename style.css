@@ -779,8 +779,8 @@ footer p:last-child {
 
 /* Robot บนมือถือ (ต้องคง translateX ไว้ด้วย) */
 @keyframes floatBotMobile {
-  0%, 100% { transform: translateX(-50%) translateY(0px); }
-  50%       { transform: translateX(-50%) translateY(-10px); }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
 }
 
 /* Orb ลอยขึ้นลงตรงๆ */
