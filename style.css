@@ -558,7 +558,11 @@ footer p:last-child {
   letter-spacing: -0.05em;
 }
 
-.case-hero h1 span {
+.case-hero h1 > span:not(.accent) {
+  color: var(--text);
+}
+
+.case-hero h1 .accent {
   color: var(--accent);
 }
 
