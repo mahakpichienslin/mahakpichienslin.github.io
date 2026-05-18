@@ -65,11 +65,11 @@
       <!-- ฝั่งซ้าย: ข้อความหลัก -->
       <div class="hero-text">
         <p class="status">Available for freelance</p>
-        <h1>
-          3D. Web.<br />
-          <span>Systems.</span><br />
-          Design.
-        </h1>
+        <h1 class="glitch-title">
+  <span>3D. Web.</span>
+  <span class="accent">Systems.</span>
+  <span>Design.</span>
+</h1>
         <p class="intro">
           I design interactive technical systems for industrial products.
           I build interactive 3D experiences, automation systems,
@@ -88,27 +88,28 @@
         <img src="assets/neural.png" class="neural" alt="" />
 
         <!-- Robot wrapper: มี glow filter + float animation -->
-        <div class="robot-wrap">
-          <model-viewer
-            id="robotModel"
-            class="robot-model"
-            src="assets/robot-head-v2.glb"
-            autoplay
-            disable-zoom
-            interaction-prompt="none"
-            touch-action="none"
-            camera-orbit="0deg 75deg 20m"
-            field-of-view="18deg"
-            exposure="0.6"
-            shadow-intensity="1"
-            shadow-softness="0.8"
-            environment-intensity="0.4"
-            tone-mapping="commerce"
-            environment-image="https://modelviewer.dev/shared-assets/environments/moon_1k.hdr">
-          </model-viewer>
-        </div>
-
-      </div>
+        <div class="robot-enter">
+  <div class="robot-wrap">
+    <model-viewer
+      id="robotModel"
+      class="robot-model"
+      src="assets/robot-head-v2.glb"
+      autoplay
+      disable-zoom
+      interaction-prompt="none"
+      touch-action="none"
+      camera-orbit="0deg 75deg 20m"
+      field-of-view="18deg"
+      exposure="0.6"
+      shadow-intensity="1"
+      shadow-softness="0.8"
+      environment-intensity="0.4"
+      tone-mapping="commerce"
+      environment-image="https://modelviewer.dev/shared-assets/environments/moon_1k.hdr">
+    </model-viewer>
+  </div>
+</div>
+     </div>
     </section>
 
 

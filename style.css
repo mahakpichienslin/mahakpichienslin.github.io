@@ -82,27 +82,38 @@ h1, h2, h3, .logo {
    ============================================================ */
 .nav {
   position: fixed;
-  top: 0;
-  width: 100%;
-  height: 58px;
-  padding: 0 8%;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: min(760px, calc(100% - 48px));
+  height: 52px;
+  padding: 0 22px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--line);
-  background: rgba(3, 3, 3, 0.85);
-  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(201, 255, 0, 0.22);
+  border-radius: 14px;
+
+  background: rgba(30, 38, 0, 0.55);
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 0 28px rgba(201, 255, 0, 0.08);
+
   z-index: 50;
 }
 
 .logo {
   color: var(--accent);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
 }
 
 .nav a {
-  margin-left: 48px;
+  margin-left: 30px;
   font-size: 12px;
   color: #d8d8d8;
 }
@@ -117,7 +128,7 @@ h1, h2, h3, .logo {
   min-height: 100vh;
   padding: 160px 8% 80px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   align-items: center;
@@ -141,7 +152,11 @@ h1, h2, h3, .logo {
   letter-spacing: -0.05em;
 }
 
-.hero h1 span {
+.hero h1 > span:not(.accent) {
+  color: var(--text);
+}
+
+.hero h1 .accent {
   color: var(--accent);
 }
 
@@ -185,8 +200,12 @@ h1, h2, h3, .logo {
 /* พื้นที่ฝั่งขวาสำหรับ 3D Model */
 .hero-visual {
   position: relative;
-  height: 620px;
+  height: 580px;        /* ← กำหนดให้ชัด */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 4;
+  overflow: visible;    /* ← เพิ่ม */
 }
 
 /* รูป neural network (background decoration) */
@@ -274,27 +293,48 @@ h1, h2, h3, .logo {
    ห่อ model-viewer ด้วย .robot-wrap
    drop-shadow ทำให้ robot มี glow รอบตัว
    ============================================================ */
-.robot-wrap {
-  position: absolute;
+.robot-enter {
+  position: relative;   /* ← เปลี่ยนจาก absolute */
   width: 520px;
   height: 520px;
-  top: 40px;
-  left: 22%;
+  /* ลบ top และ left ออก */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 4;
+  animation: robotEnter 1.8s cubic-bezier(.16,1,.3,1);
+}
+
+@keyframes robotEnter {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.robot-wrap {
+  width: 100%;
+  height: 100%;
   overflow: visible;
   pointer-events: none;
+
   filter:
     drop-shadow(0 0 40px rgba(181, 255, 120, 0.31))
     drop-shadow(0 0 90px rgba(181, 255, 120, 0.27));
+
   animation: floatBot 5s ease-in-out infinite;
 }
 
-/* ตัว model-viewer element */
 .robot-model {
   width: 100%;
   height: 100%;
   background: transparent !important;
   --poster-color: transparent;
+  transition: camera-orbit 0.4s ease;
 }
 
 /* ซ่อน UI default ของ model-viewer ทั้งหมด */
@@ -316,8 +356,7 @@ model-viewer {
    hover แล้วยกขึ้นพร้อม glow สี accent
    ============================================================ */
 .section {
-  padding: 70px 8%;
-  border-bottom: 1px solid var(--line);
+  padding: 0;
 }
 
 .section h2 {
@@ -518,7 +557,11 @@ footer p:last-child {
   letter-spacing: -0.05em;
 }
 
-.case-hero h1 span {
+.case-hero h1 > span:not(.accent) {
+  color: var(--text);
+}
+
+.case-hero h1 .accent {
   color: var(--accent);
 }
 
@@ -655,7 +698,7 @@ footer p:last-child {
 }
 
 .next-project h2 {
-  font-size: 28px;
+  font-size: 20px;
 }
 
 .cta-wrap {
@@ -698,6 +741,8 @@ footer p:last-child {
 
 .screenshots-track.dragging {
   cursor: grabbing;
+  scroll-behavior: auto;
+  scroll-snap-type: none;
 }
 
 .shot {
@@ -717,14 +762,17 @@ footer p:last-child {
   object-fit: cover;
   object-position: center top;
   pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .slider-hint {
   color: var(--muted);
   font-size: 13px;
-  margin-top: -18px;
+  margin-top: 8px;
   margin-bottom: 24px;
 }
+
 
 
 /* ============================================================
@@ -739,8 +787,8 @@ footer p:last-child {
 
 /* Robot บนมือถือ (ต้องคง translateX ไว้ด้วย) */
 @keyframes floatBotMobile {
-  0%, 100% { transform: translateX(-50%) translateY(0px); }
-  50%       { transform: translateX(-50%) translateY(-10px); }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
 }
 
 /* Orb ลอยขึ้นลงตรงๆ */
@@ -793,6 +841,32 @@ footer p:last-child {
    ============================================================ */
 @media (max-width: 900px) {
 
+  .robot-enter {
+    position: relative;
+    width: 100%;
+    max-width: 340px;
+    height: 340px;
+
+    left: auto;
+    top: auto;
+
+    margin: 40px auto 0;
+
+    transform: none;
+  }
+
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .robot-wrap {
+    animation: floatBotMobile 5s ease-in-out infinite;
+  }
+
   /* Navigation */
   .nav {
     padding: 0 24px;
@@ -805,6 +879,9 @@ footer p:last-child {
   /* Hero */
   .hero {
     grid-template-columns: 1fr;
+   display: flex;
+     flex-direction: column;  /* ← เพิ่มบรรทัดนี้ */
+  align-items: center; 
     padding: 120px 24px 60px;
     min-height: auto;
   }
@@ -839,27 +916,19 @@ footer p:last-child {
 
   /* Hero Visual */
   .hero-visual {
-    height: 520px;
+    height: 360px;
     margin-top: 30px;
-    overflow: hidden;
+   overflow: visible;
     width: 100%;
+     display: flex;           /* ← เพิ่ม */
+  justify-content: center; /* ← เพิ่ม */
+  align-items: center; 
   }
 
   /* ซ่อน neural image บนมือถือ */
   .neural {
     display: none;
   }
-
-  /* Robot บนมือถือ — จัดกึ่งกลาง */
-  .robot-wrap {
-    width: 320px;
-    height: 320px;
-    left: 50%;
-    top: 20px;
-    transform: translateX(-50%);
-    animation: floatBotMobile 5s ease-in-out infinite;
-  }
-
   /* Orb */
   .orb-large {
     width: 240px;
@@ -934,6 +1003,245 @@ footer p:last-child {
   .shot {
     width: 86vw;
     height: 260px;
+  }
+}
+
+.glitch-title span {
+  display: block;
+  color: var(--text);
+  opacity: 0;
+  transform: translateY(28px);
+  filter: blur(8px);
+  animation: signalReveal 0.9s ease forwards;
+}
+
+.glitch-title .accent {
+  color: var(--accent);
+}
+
+.glitch-title span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.glitch-title span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.glitch-title span:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.glitch-title .accent {
+  color: var(--accent);
+}
+
+@keyframes signalReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(28px) skewX(8deg);
+    filter: blur(10px);
+    text-shadow:
+      2px 0 rgba(201,255,0,0.8),
+      -2px 0 rgba(120,255,255,0.35);
+  }
+
+  35% {
+    opacity: 0.7;
+    transform: translateY(0) skewX(-5deg);
+    filter: blur(3px);
+  }
+
+  55% {
+    opacity: 0.4;
+    transform: translateX(8px);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateX(-4px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) skewX(0);
+    filter: blur(0);
+    text-shadow: none;
+  }
+}
+
+body {
+  opacity: 0;
+  animation: pageFadeIn 0.6s ease forwards;
+}
+
+body.page-exit {
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.section,
+.case-grid,
+.metrics-section {
+  width: 92%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section,
+.case-grid,
+.metrics-section {
+  margin-top: 90px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.metric-card {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 28px;
+  min-height: 140px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.metric-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.metric-card span {
+  display: block;
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+.metric-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.analytics-image {
+  width: 100%;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  background: #111;
+}
+
+.analytics-image img {
+  width: 100%;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+.section,
+.case-grid,
+.metrics-section {
+  width: 92%;
+  max-width: 1600px;
+  margin: 90px auto 0;
+  box-sizing: border-box;
+}
+
+.section {
+  padding: 0;
+  border-bottom: none;
+}
+
+.section,
+.case-grid,
+.metrics-section {
+  margin-top: 90px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.metric-card {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 28px;
+  min-height: 140px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.metric-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.metric-card span {
+  display: block;
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+.metric-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.analytics-image {
+  width: 100%;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  background: #111;
+}
+
+.analytics-image img {
+  width: 100%;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
   }
 }
 
