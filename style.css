@@ -1227,8 +1227,8 @@ body.page-exit {
   filter: blur(0.2px);
 }
 
-.rekha-hero .accent {
-  color: #c59cff;
+.rekha-hero h1 .accent {
+  color: #c59cff !important;
 
   text-shadow:
     0 0 30px rgba(180, 120, 255, 0.30),
