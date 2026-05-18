@@ -1186,6 +1186,7 @@ body.page-exit {
 }
 
 .rekha-hero {
+  --accent: #c59cff;
   background:
     linear-gradient(
       to bottom,
@@ -1242,3 +1243,5 @@ body.page-exit {
     0 0 18px rgba(180, 120, 255, 0.22),
     0 0 40px rgba(180, 120, 255, 0.10);
 }
+
+
