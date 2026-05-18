@@ -1234,3 +1234,11 @@ body.page-exit {
     0 0 80px rgba(180, 120, 255, 0.14),
     0 0 130px rgba(180, 120, 255, 0.05);
 }
+
+.rekha-hero .status {
+  color: #c59cff;
+
+  text-shadow:
+    0 0 18px rgba(180, 120, 255, 0.22),
+    0 0 40px rgba(180, 120, 255, 0.10);
+}
