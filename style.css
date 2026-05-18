@@ -698,13 +698,13 @@ footer p:last-child {
 }
 
 .next-project h2 {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .cta-wrap {
   display: flex;
   justify-content: flex-end;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 
@@ -1164,4 +1164,23 @@ body.page-exit {
   .metrics-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.mini-chart {
+  display: none;
+  align-items: end;
+  gap: 6px;
+  height: 70px;
+  margin-top: 20px;
+}
+
+.mini-chart div {
+  width: 16px;
+  background: var(--accent);
+  opacity: 0.85;
+  border-radius: 4px 4px 0 0;
+}
+
+.mini-chart.active {
+  display: flex;
 }

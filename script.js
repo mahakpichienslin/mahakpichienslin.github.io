@@ -112,3 +112,7 @@ document.querySelectorAll("a").forEach((link) => {
     }, 450);
   });
 });
+
+function toggleChart(id) {
+  document.getElementById(id).classList.toggle("active");
+}
