@@ -1208,3 +1208,12 @@ body.page-exit {
     drop-shadow(0 0 20px rgba(180, 120, 255, 0.28))
     drop-shadow(0 0 60px rgba(180, 120, 255, 0.12));
 }
+
+.rekha-hero .case-product img {
+  width: 55% !important;
+  max-width: 280px !important;
+
+  filter:
+    drop-shadow(0 0 30px rgba(180, 120, 255, 0.30))
+    drop-shadow(0 0 80px rgba(180, 120, 255, 0.14)) !important;
+}
