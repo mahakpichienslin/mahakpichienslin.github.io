@@ -411,20 +411,25 @@ model-viewer {
 /* Tags ใต้ description */
 .tags {
   margin: 22px 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .tags span {
   border: 1px solid #333;
   padding: 5px 10px;
-  margin-right: 6px;
+
   color: #aaa;
   font-size: 11px;
+
+  white-space: nowrap;
 }
 
 .project-card small {
   color: #bdbdbd;
 }
-
 
 /* ============================================================
    9. SKILLS SECTION — CAPABILITIES GRID
