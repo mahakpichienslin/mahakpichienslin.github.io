@@ -113,6 +113,4 @@ document.querySelectorAll("a").forEach((link) => {
   });
 });
 
-function toggleChart(id) {
-  document.getElementById(id).classList.toggle("active");
-}
+
