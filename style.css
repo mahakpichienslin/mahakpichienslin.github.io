@@ -1185,6 +1185,23 @@ body.page-exit {
   display: flex;
 }
 
+.rekha-nav {
+  border: 1px solid rgba(180, 120, 255, 0.22);
+
+  background: rgba(40, 20, 60, 0.45);
+
+  box-shadow:
+    0 0 28px rgba(180, 120, 255, 0.08);
+}
+
+.rekha-nav .logo {
+  color: #c59cff;
+}
+
+.rekha-nav nav a:hover {
+  color: #c59cff;
+}
+
 .rekha-hero {
   --accent: #c59cff;
   background:
@@ -1227,8 +1244,8 @@ body.page-exit {
   filter: blur(0.2px);
 }
 
-.rekha-hero h1 .accent {
-  color: #c59cff !important;
+.rekha-hero .accent {
+  color: #c59cff;
 
   text-shadow:
     0 0 30px rgba(180, 120, 255, 0.30),
@@ -1244,4 +1261,69 @@ body.page-exit {
     0 0 40px rgba(180, 120, 255, 0.10);
 }
 
+.rekha-page h2,
+.rekha-page .process-grid span,
+.rekha-page .tool-grid div {
+  color: #c59cff;
+}
 
+.rekha-page .status {
+  color: #c59cff;
+}
+
+rekha-page .status {
+  color: #c59cff;
+
+  text-shadow:
+    0 0 18px rgba(180, 120, 255, 0.22),
+    0 0 40px rgba(180, 120, 255, 0.10);
+}
+
+.rekha-page .process-grid div {
+  background: rgba(255,255,255,0.015);
+
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(180, 120, 255, 0.18);
+}
+
+.rekha-page .process-grid span {
+  color: #c59cff;
+
+  text-shadow:
+    0 0 18px rgba(180, 120, 255, 0.18),
+    0 0 40px rgba(180, 120, 255, 0.08);
+}
+
+.rekha-page .tool-grid div {
+  border: 1px solid rgba(180, 120, 255, 0.18);
+
+  background: rgba(255,255,255,0.015);
+
+  backdrop-filter: blur(8px);
+}
+
+.rekha-page .tool-grid span {
+  color: #c59cff;
+
+  text-shadow:
+    0 0 18px rgba(180, 120, 255, 0.18),
+    0 0 40px rgba(180, 120, 255, 0.08);
+}
+
+.rekha-page .btn.primary {
+  background: #c59cff;
+  color: #000;
+
+  border-color: #c59cff;
+
+  box-shadow:
+    0 0 20px rgba(180, 120, 255, 0.22),
+    0 0 60px rgba(180, 120, 255, 0.08);
+}
+
+.rekha-page .btn:hover {
+  box-shadow:
+    0 0 28px rgba(180, 120, 255, 0.28),
+    0 0 80px rgba(180, 120, 255, 0.12);
+}
