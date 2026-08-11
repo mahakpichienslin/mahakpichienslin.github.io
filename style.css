@@ -4022,3 +4022,152 @@ rekha-page .status {
 .beijing-page h2 {
   color: var(--beijing-red);
 }
+
+/* ============================================================
+   BEIJING — FLOATING CHARACTER FACES
+   ============================================================ */
+
+.beijing-floating-faces {
+  position: absolute;
+  inset: 0;
+
+  z-index: 2;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+
+/* Base */
+
+.beijing-floating-face {
+  position: absolute;
+
+  display: block;
+
+  object-fit: contain;
+
+  user-select: none;
+
+  filter:
+    drop-shadow(0 12px 25px rgba(0, 0, 0, 0.28));
+
+  will-change: transform;
+}
+
+
+/* FACE 01 */
+
+.beijing-face-one {
+  width: 110px;
+
+  right: 8%;
+  top: 20%;
+
+  opacity: 0.78;
+
+  transform: rotate(-7deg);
+
+  animation:
+    beijingFaceFloatOne 6s ease-in-out infinite;
+}
+
+
+/* FACE 02 */
+
+.beijing-face-two {
+  width: 85px;
+
+  right: 36%;
+  bottom: 12%;
+
+  opacity: 0.55;
+
+  transform: rotate(8deg);
+
+  animation:
+    beijingFaceFloatTwo 7.5s ease-in-out infinite;
+}
+
+
+/* FLOAT 01 */
+
+@keyframes beijingFaceFloatOne {
+
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(-7deg);
+  }
+
+  50% {
+    transform:
+      translateY(-18px)
+      rotate(-2deg);
+  }
+
+}
+
+
+/* FLOAT 02 */
+
+@keyframes beijingFaceFloatTwo {
+
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      translateX(0)
+      rotate(8deg);
+  }
+
+  50% {
+    transform:
+      translateY(-12px)
+      translateX(8px)
+      rotate(4deg);
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  .beijing-face-one {
+    width: 80px;
+
+    right: 4%;
+    top: 17%;
+
+    opacity: 0.55;
+  }
+
+  .beijing-face-two {
+    width: 65px;
+
+    right: 10%;
+    bottom: 8%;
+
+    opacity: 0.35;
+  }
+
+}
+
+
+@media (max-width: 620px) {
+
+  .beijing-face-one {
+    width: 65px;
+
+    top: 14%;
+  }
+
+  .beijing-face-two {
+    display: none;
+  }
+
+}
