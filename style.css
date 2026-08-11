@@ -5153,3 +5153,78 @@ rekha-page .status {
   }
 
 }
+
+.bi-card-revenue {
+  top: 30px;
+  left: 20px;
+
+  animation: biFloatRevenue 6s ease-in-out infinite;
+}
+
+.bi-card-product {
+  top: 190px;
+  right: 0;
+
+  animation: biFloatProduct 7s ease-in-out infinite;
+}
+
+.bi-card-digital {
+  bottom: 0;
+  left: 0;
+
+  animation: biFloatDigital 6.5s ease-in-out infinite;
+}
+
+.bi-data-card {
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.bi-data-card:hover {
+  border-color: rgba(111, 146, 255, 0.75);
+
+  box-shadow:
+    0 0 30px rgba(111, 146, 255, 0.12);
+}
+
+/* ================= KPI CARD FLOAT ================= */
+
+@keyframes biFloatRevenue {
+  0%, 100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(0.5deg);
+  }
+}
+
+@keyframes biFloatProduct {
+  0%, 100% {
+    transform: translateY(0) rotate(1deg);
+  }
+
+  50% {
+    transform: translateY(-14px) rotate(-0.5deg);
+  }
+}
+
+@keyframes biFloatDigital {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+
+  50% {
+    transform: translateY(-8px) translateX(5px);
+  }
+} 
+
+/* ================= REDUCE MOTION ================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .bi-data-card {
+    animation: none !important;
+  }
+}
+ 
