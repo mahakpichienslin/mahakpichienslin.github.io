@@ -7135,4 +7135,27 @@ rekha-page .status {
 
 }
 
- 
+ /* ============================================================
+   PROJECT 007 — SYSTEM SCREENSHOT
+   ============================================================ */
+
+.maint-system-screenshot {
+  position: relative;
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 107, 44, 0.28);
+  border-radius: 20px;
+
+  background: #090706;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.32),
+    0 0 35px rgba(255, 107, 44, 0.06);
+}
+
+.maint-system-screenshot img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
