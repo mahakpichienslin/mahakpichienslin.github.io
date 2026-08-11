@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Aviation Obstruction Light Maintenance — Case Study</title>
+  <title>
+    Aviation Obstruction Light Maintenance Operations — Case Study
+  </title>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -34,82 +36,96 @@
 </nav>
 
 
+
 <!-- =========================================================
      HERO
 ========================================================= -->
 
 <header class="maint-hero">
 
-  <!-- warning glow decoration -->
   <div class="maint-warning-glow"></div>
 
 
   <div class="maint-hero-grid">
 
+
     <!-- LEFT -->
+
     <div class="maint-hero-copy">
 
       <p class="maint-eyebrow">
-        007 — INDUSTRIAL WEB TOOL / MAINTENANCE
+        007 — FIELD OPERATIONS / WORKFLOW SYSTEM
       </p>
 
       <h1>
         Aviation<br>
         Obstruction Light<br>
-        <span>Maintenance</span>
+        <span>Maintenance Operations</span>
       </h1>
 
       <p class="maint-intro">
-        An interactive maintenance and troubleshooting tool
-        that transforms engineering knowledge into a structured
-        digital workflow for field technicians.
+
+        A digital field maintenance workflow designed to
+        standardize site reporting, reduce duplicate administrative
+        work, and generate structured maintenance documentation
+        across approximately 1,800 sites.
+
       </p>
 
     </div>
 
 
+
     <!-- RIGHT -->
+
     <div class="maint-hero-system">
 
       <div class="maint-system-status">
+
         <span class="maint-status-dot"></span>
-        MAINTENANCE SYSTEM
+
+        FIELD OPERATIONS SYSTEM
+
       </div>
+
 
       <div class="maint-system-card">
 
-        <span>FIELD DIAGNOSIS</span>
+        <span>
+          MAINTENANCE WORKFLOW
+        </span>
 
         <strong>
-          Fault → Cause → Action
+          Enter → Review → Submit
         </strong>
 
         <p>
-          Structured troubleshooting for aviation
-          obstruction lighting systems.
+          One structured workflow from field maintenance
+          data to completed documentation.
         </p>
 
       </div>
 
 
       <div class="maint-mini-card maint-mini-01">
-        <span>01</span>
-        POWER
+        <span>SCALE</span>
+        ~1,800 SITES
       </div>
 
       <div class="maint-mini-card maint-mini-02">
-        <span>02</span>
-        CONTROL
+        <span>INPUT</span>
+        FIELD DATA
       </div>
 
       <div class="maint-mini-card maint-mini-03">
-        <span>03</span>
-        OUTPUT
+        <span>OUTPUT</span>
+        REPORT
       </div>
 
     </div>
 
   </div>
+
 
 
   <!-- META -->
@@ -123,22 +139,22 @@
 
     <div>
       <span>Type</span>
-      <strong>Industrial Web Tool</strong>
+      <strong>Field Operations System</strong>
     </div>
 
     <div>
       <span>Role</span>
-      <strong>Designer / Developer</strong>
+      <strong>System Designer / Developer</strong>
     </div>
 
     <div>
-      <span>Technology</span>
+      <span>Platform</span>
       <strong>Wix Velo / JavaScript</strong>
     </div>
 
     <div>
-      <span>Domain</span>
-      <strong>Aviation / Electrical</strong>
+      <span>Scale</span>
+      <strong>~1,800 Sites</strong>
     </div>
 
   </div>
@@ -148,51 +164,60 @@
 
 
 <!-- =========================================================
-     01 CONTEXT
+     01 OPERATIONAL CONTEXT
 ========================================================= -->
 
 <section class="maint-section">
 
   <p class="maint-section-number">
-    01 / CONTEXT
+    01 / OPERATIONAL CONTEXT
   </p>
 
   <h2>
-    Maintenance starts<br>
-    with the right diagnosis.
+    1,800 sites.<br>
+    One fragmented workflow.
   </h2>
 
 
   <div class="maint-context-grid">
 
-    <p class="maint-large-text">
 
-      Aviation obstruction lighting systems involve multiple
-      electrical components — from power protection and control
-      systems to drivers and lamps.
+    <div>
 
-      <br><br>
+      <p class="maint-large-text">
 
-      When a fault occurs, technicians need to identify the
-      failure point before replacing equipment or performing
-      corrective maintenance.
+        Aviation obstruction light maintenance is performed
+        across approximately 1,800 sites.
 
-    </p>
+        <br><br>
+
+        Previously, field contractors reported completed work
+        through LINE — manually typing site codes, equipment
+        information, models, maintenance details and remarks,
+        while sending supporting photos separately.
+
+      </p>
+
+    </div>
 
 
     <div class="maint-context-highlight">
 
-      <span>THE CHALLENGE</span>
+      <span>OPERATIONAL SCALE</span>
 
-      <strong>
-        Different faults can produce
-        similar symptoms.
+      <strong class="maint-scale-number">
+        ~1,800
       </strong>
 
+      <h3>
+        Maintenance Sites
+      </h3>
+
       <p>
-        Troubleshooting therefore requires both
-        technical knowledge and a structured
-        inspection process.
+
+        At this scale, even a small repetitive administrative
+        step becomes a significant operational workload.
+
       </p>
 
     </div>
@@ -204,33 +229,89 @@
 
 
 <!-- =========================================================
-     02 PROBLEM
+     02 OLD WORKFLOW
 ========================================================= -->
 
 <section class="maint-section">
 
   <p class="maint-section-number">
-    02 / THE PROBLEM
+    02 / THE OLD WORKFLOW
   </p>
 
   <h2>
-    Technical knowledge<br>
-    shouldn't live only in manuals.
+    The same information<br>
+    was effectively entered twice.
   </h2>
 
 
+  <div class="maint-old-flow">
+
+
+    <div>
+      <span>01</span>
+      <strong>Field Site</strong>
+      <small>Maintenance completed</small>
+    </div>
+
+    <b>→</b>
+
+    <div>
+      <span>02</span>
+      <strong>Type in LINE</strong>
+      <small>Site / model / work details</small>
+    </div>
+
+    <b>→</b>
+
+    <div>
+      <span>03</span>
+      <strong>Send Photos</strong>
+      <small>Evidence sent separately</small>
+    </div>
+
+    <b>→</b>
+
+    <div>
+      <span>04</span>
+      <strong>Office Staff</strong>
+      <small>Receive and interpret data</small>
+    </div>
+
+    <b>→</b>
+
+    <div>
+      <span>05</span>
+      <strong>Re-enter Data</strong>
+      <small>Create maintenance document</small>
+    </div>
+
+    <b>→</b>
+
+    <div>
+      <span>06</span>
+      <strong>Final Report</strong>
+      <small>Photos + information assembled</small>
+    </div>
+
+  </div>
+
+
   <div class="maint-problem-grid">
+
 
     <article>
 
       <span>01</span>
 
-      <h3>Complex System</h3>
+      <h3>
+        Duplicate<br>
+        Data Entry
+      </h3>
 
       <p>
-        Multiple electrical components can produce
-        similar failure symptoms, making the source
-        of a fault difficult to identify immediately.
+        Contractors entered information in LINE,
+        then office staff entered essentially the
+        same information again into formal documents.
       </p>
 
     </article>
@@ -240,12 +321,15 @@
 
       <span>02</span>
 
-      <h3>Field Diagnosis</h3>
+      <h3>
+        Inconsistent<br>
+        Information
+      </h3>
 
       <p>
-        Technicians need a quick way to move from
-        observed symptoms toward relevant inspection
-        points while working on-site.
+        Site codes, equipment names and model numbers
+        were entered as free text, increasing the chance
+        of mismatched or incomplete information.
       </p>
 
     </article>
@@ -255,15 +339,19 @@
 
       <span>03</span>
 
-      <h3>Knowledge Gap</h3>
+      <h3>
+        Manual Photo<br>
+        Management
+      </h3>
 
       <p>
-        Maintenance knowledge often exists across
-        technical manuals and experienced personnel
-        instead of one accessible workflow.
+        Maintenance photos had to be downloaded,
+        matched with the correct site and inserted
+        into reports manually.
       </p>
 
     </article>
+
 
   </div>
 
@@ -272,7 +360,7 @@
 
 
 <!-- =========================================================
-     03 SOLUTION
+     03 THE SOLUTION
 ========================================================= -->
 
 <section class="maint-section maint-solution">
@@ -282,41 +370,54 @@
   </p>
 
   <h2>
-    Turning troubleshooting<br>
-    into an interactive workflow.
+    Enter once.<br>
+    Review once. Submit once.
   </h2>
 
 
   <div class="maint-solution-grid">
 
+
     <div class="maint-solution-copy">
 
       <span class="maint-label">
-        INTERACTIVE MAINTENANCE TOOL
+        FIELD MAINTENANCE SYSTEM
       </span>
 
       <h3>
-        From symptom<br>
-        to recommended action.
+        Move documentation<br>
+        back to the source.
       </h3>
 
       <p>
-        I designed a browser-based maintenance assistant
-        that converts technical troubleshooting knowledge
-        into a guided diagnostic experience.
+
+        I designed a browser-based workflow that allows
+        contractors to complete structured maintenance
+        information directly from the field.
+
       </p>
 
       <p>
-        Instead of navigating lengthy documentation,
-        technicians can follow structured inspection paths
-        based on the fault they observe.
+
+        Site information, equipment details, model numbers,
+        work performed, remarks and photo evidence are
+        collected in one workflow and reviewed before
+        submission.
+
+      </p>
+
+      <p>
+
+        This removes the need for office staff to rebuild
+        the same maintenance report from LINE conversations.
+
       </p>
 
     </div>
 
 
-    <!-- Placeholder ตอนนี้
-         เดี๋ยวเปลี่ยนเป็น Screenshot เว็บจริง -->
+
+    <!-- SYSTEM PREVIEW -->
 
     <div class="maint-ui-preview">
 
@@ -324,20 +425,22 @@
 
         <span class="maint-status-dot"></span>
 
-        SYSTEM DIAGNOSIS
+        FIELD MAINTENANCE REPORT
 
-        <small>ONLINE</small>
+        <small>READY</small>
 
       </div>
 
 
       <div class="maint-ui-question">
 
-        <span>FAULT REPORTED</span>
+        <span>
+          SITE INFORMATION
+        </span>
 
         <strong>
-          Obstruction light<br>
-          is not operating
+          Structured maintenance<br>
+          data at the source
         </strong>
 
       </div>
@@ -347,22 +450,32 @@
 
         <div>
           <span>01</span>
-          CHECK POWER
+          SITE CODE
         </div>
 
         <div>
           <span>02</span>
-          CHECK PROTECTION
+          EQUIPMENT
         </div>
 
         <div>
           <span>03</span>
-          CHECK CONTROL
+          MODEL
         </div>
 
         <div>
           <span>04</span>
-          CHECK OUTPUT
+          WORK DETAIL
+        </div>
+
+        <div>
+          <span>05</span>
+          REMARK
+        </div>
+
+        <div>
+          <span>06</span>
+          PHOTO EVIDENCE
         </div>
 
       </div>
@@ -376,59 +489,69 @@
 
 
 <!-- =========================================================
-     04 TROUBLESHOOTING LOGIC
+     04 NEW WORKFLOW
 ========================================================= -->
 
 <section class="maint-section">
 
   <p class="maint-section-number">
-    04 / TROUBLESHOOTING LOGIC
+    04 / THE NEW WORKFLOW
   </p>
 
   <h2>
-    Engineering knowledge<br>
-    becomes decision logic.
+    One workflow from site<br>
+    to maintenance report.
   </h2>
 
 
-  <div class="maint-logic-flow">
+  <div class="maint-new-flow">
+
 
     <div>
       <span>01</span>
-      <strong>Fault Reported</strong>
-      <small>Observed symptom</small>
+      <strong>Date</strong>
     </div>
 
     <b>→</b>
 
     <div>
       <span>02</span>
-      <strong>Power</strong>
-      <small>Input inspection</small>
+      <strong>Site Code</strong>
     </div>
 
     <b>→</b>
 
     <div>
       <span>03</span>
-      <strong>Protection</strong>
-      <small>Fuse / Protection</small>
+      <strong>Equipment</strong>
     </div>
 
     <b>→</b>
 
     <div>
       <span>04</span>
-      <strong>Control</strong>
-      <small>Control system</small>
+      <strong>Model</strong>
     </div>
 
     <b>→</b>
 
     <div>
       <span>05</span>
-      <strong>Output</strong>
-      <small>Driver / Lamp</small>
+      <strong>Work / Remark</strong>
+    </div>
+
+    <b>→</b>
+
+    <div>
+      <span>06</span>
+      <strong>Photos</strong>
+    </div>
+
+    <b>→</b>
+
+    <div class="maint-new-flow-final">
+      <span>07</span>
+      <strong>Review & Submit</strong>
     </div>
 
   </div>
@@ -436,13 +559,15 @@
 
   <div class="maint-logic-explanation">
 
-    <span>FROM KNOWLEDGE → LOGIC</span>
+    <span>WORKFLOW PRINCIPLE</span>
 
     <p>
-      Maintenance procedures were translated into
-      structured decision paths, allowing technicians
-      to move from observed symptoms to likely causes
-      and recommended inspection actions.
+
+      Maintenance information is entered once at the source,
+      kept in a structured format, reviewed together with
+      photo evidence, and prepared for documentation without
+      requiring a second round of manual data entry.
+
     </p>
 
   </div>
@@ -452,36 +577,32 @@
 
 
 <!-- =========================================================
-     05 DEVELOPMENT
+     05 DATA STANDARDIZATION
 ========================================================= -->
 
 <section class="maint-section">
 
   <p class="maint-section-number">
-    05 / DEVELOPMENT
+    05 / DATA STANDARDIZATION
   </p>
 
   <h2>
-    Designed for the field.<br>
-    Built for the browser.
+    From LINE messages<br>
+    to structured maintenance data.
   </h2>
 
 
-  <div class="maint-development-grid">
+  <div class="maint-standard-grid">
+
 
     <article>
 
-      <span>01 / UX</span>
+      <span>FIELD</span>
 
-      <h3>
-        Field-first<br>
-        Interface
-      </h3>
+      <h3>Date</h3>
 
       <p>
-        Information is structured around quick
-        troubleshooting actions rather than
-        lengthy technical documentation.
+        Standardized maintenance visit date.
       </p>
 
     </article>
@@ -489,17 +610,279 @@
 
     <article>
 
-      <span>02 / LOGIC</span>
+      <span>SITE</span>
+
+      <h3>Site Code</h3>
+
+      <p>
+        A consistent identifier for each maintenance location.
+      </p>
+
+    </article>
+
+
+    <article>
+
+      <span>ASSET</span>
+
+      <h3>Equipment</h3>
+
+      <p>
+        Equipment information recorded in a structured format.
+      </p>
+
+    </article>
+
+
+    <article>
+
+      <span>ASSET</span>
+
+      <h3>Model</h3>
+
+      <p>
+        Model information linked with the reported equipment.
+      </p>
+
+    </article>
+
+
+    <article>
+
+      <span>WORK</span>
+
+      <h3>Maintenance Action</h3>
+
+      <p>
+        Work performed and relevant field notes.
+      </p>
+
+    </article>
+
+
+    <article>
+
+      <span>EVIDENCE</span>
+
+      <h3>Photos</h3>
+
+      <p>
+        Photo evidence stored together with the maintenance record.
+      </p>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     06 DOCUMENT WORKFLOW
+========================================================= -->
+
+<section class="maint-section">
+
+  <p class="maint-section-number">
+    06 / DOCUMENT WORKFLOW
+  </p>
+
+  <h2>
+    Field input becomes<br>
+    usable documentation.
+  </h2>
+
+
+  <div class="maint-document-flow">
+
+
+    <div>
+
+      <span>01</span>
 
       <h3>
-        Interactive<br>
-        Diagnosis
+        Field Input
       </h3>
 
       <p>
-        User selections guide technicians through
-        different inspection paths and relevant
-        maintenance recommendations.
+        Contractor completes structured information.
+      </p>
+
+    </div>
+
+
+    <b>→</b>
+
+
+    <div>
+
+      <span>02</span>
+
+      <h3>
+        Structured Data
+      </h3>
+
+      <p>
+        Site and equipment information stay standardized.
+      </p>
+
+    </div>
+
+
+    <b>→</b>
+
+
+    <div>
+
+      <span>03</span>
+
+      <h3>
+        Photo Evidence
+      </h3>
+
+      <p>
+        Images remain connected to the correct maintenance work.
+      </p>
+
+    </div>
+
+
+    <b>→</b>
+
+
+    <div class="maint-document-final">
+
+      <span>04</span>
+
+      <h3>
+        Maintenance Report
+      </h3>
+
+      <p>
+        Information is ready for formal documentation.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     07 BUILT-IN REVIEW
+========================================================= -->
+
+<section class="maint-section">
+
+  <p class="maint-section-number">
+    07 / BUILT-IN REVIEW
+  </p>
+
+  <h2>
+    Reporting also becomes<br>
+    a verification step.
+  </h2>
+
+
+  <div class="maint-context-grid">
+
+
+    <div>
+
+      <p class="maint-large-text">
+
+        Because the contractor completes the maintenance
+        information directly, the reporting workflow also
+        becomes an opportunity to review the work before
+        submission.
+
+      </p>
+
+    </div>
+
+
+    <div class="maint-context-highlight">
+
+      <span>REVIEW TOGETHER</span>
+
+      <strong>
+        Site + Equipment + Work + Evidence
+      </strong>
+
+      <p>
+
+        Instead of information being scattered across multiple
+        LINE messages, the relevant maintenance record can be
+        checked as one complete set.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     08 DEVELOPMENT
+========================================================= -->
+
+<section class="maint-section">
+
+  <p class="maint-section-number">
+    08 / DEVELOPMENT
+  </p>
+
+  <h2>
+    Designed for field use.<br>
+    Built inside the existing web ecosystem.
+  </h2>
+
+
+  <div class="maint-development-grid">
+
+
+    <article>
+
+      <span>01 / WORKFLOW</span>
+
+      <h3>
+        Process<br>
+        Redesign
+      </h3>
+
+      <p>
+
+        Mapped the existing LINE-to-office workflow
+        and removed unnecessary handoffs and repeated
+        information entry.
+
+      </p>
+
+    </article>
+
+
+    <article>
+
+      <span>02 / UX</span>
+
+      <h3>
+        Field-first<br>
+        Interface
+      </h3>
+
+      <p>
+
+        Structured the form around the information
+        contractors already need while performing
+        maintenance at each site.
+
       </p>
 
     </article>
@@ -515,101 +898,15 @@
       </h3>
 
       <p>
-        Custom logic controls user interactions,
-        conditions, diagnostic paths and
-        displayed maintenance information.
+
+        Custom interaction logic was developed using
+        Wix Velo and JavaScript within the company's
+        existing website environment.
+
       </p>
 
     </article>
 
-  </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     06 ENGINEERING SYSTEM
-========================================================= -->
-
-<section class="maint-section maint-engineering">
-
-  <p class="maint-section-number">
-    06 / ENGINEERING KNOWLEDGE
-  </p>
-
-  <h2>
-    Domain knowledge<br>
-    embedded into the product.
-  </h2>
-
-
-  <div class="maint-engineering-grid">
-
-    <!-- SYSTEM ARCHITECTURE -->
-
-    <div class="maint-architecture">
-
-      <div>
-        <span>01</span>
-        <strong>AC POWER</strong>
-      </div>
-
-      <b>↓</b>
-
-      <div>
-        <span>02</span>
-        <strong>CONTROL PANEL</strong>
-      </div>
-
-      <b>↓</b>
-
-      <div>
-        <span>03</span>
-        <strong>PROTECTION</strong>
-      </div>
-
-      <b>↓</b>
-
-      <div>
-        <span>04</span>
-        <strong>DRIVER</strong>
-      </div>
-
-      <b>↓</b>
-
-      <div class="maint-architecture-final">
-        <span>05</span>
-        <strong>OBSTRUCTION LIGHT</strong>
-      </div>
-
-    </div>
-
-
-    <!-- DESCRIPTION -->
-
-    <div class="maint-engineering-copy">
-
-      <p>
-        The diagnostic logic was developed around
-        real aviation obstruction lighting maintenance
-        scenarios and electrical system architecture.
-      </p>
-
-
-      <div class="maint-tech-tags">
-
-        <span>FUSE</span>
-        <span>SPD</span>
-        <span>POWER SUPPLY</span>
-        <span>CONTROL SIGNAL</span>
-        <span>DRIVER</span>
-        <span>LAMP</span>
-        <span>ALARM</span>
-
-      </div>
-
-    </div>
 
   </div>
 
@@ -618,35 +915,39 @@
 
 
 <!-- =========================================================
-     07 OUTCOME
+     09 OUTCOME
 ========================================================= -->
 
 <section class="maint-section">
 
   <p class="maint-section-number">
-    07 / OUTCOME
+    09 / OUTCOME
   </p>
 
   <h2>
-    Maintenance knowledge,<br>
-    structured digitally.
+    Less administrative handoff.<br>
+    Better structured reporting.
   </h2>
 
 
   <div class="maint-outcome-grid">
+
 
     <article>
 
       <span>01</span>
 
       <h3>
-        Centralized<br>
-        Knowledge
+        Single Entry<br>
+        Workflow
       </h3>
 
       <p>
-        Converted maintenance knowledge into
-        a structured digital workflow.
+
+        Maintenance information is entered once
+        at the source instead of being retyped
+        by office staff.
+
       </p>
 
     </article>
@@ -657,13 +958,16 @@
       <span>02</span>
 
       <h3>
-        Structured<br>
-        Troubleshooting
+        Standardized<br>
+        Reporting
       </h3>
 
       <p>
-        Guided technicians through relevant
-        inspection points based on observed faults.
+
+        Site, equipment and model information
+        follow a structured format rather than
+        free-text LINE messages.
+
       </p>
 
     </article>
@@ -674,13 +978,16 @@
       <span>03</span>
 
       <h3>
-        Field<br>
-        Accessible
+        Reduced Administrative<br>
+        Dependency
       </h3>
 
       <p>
-        Browser-based access removes the need
-        for specialized software installation.
+
+        The workflow is designed so contractors can
+        complete the reporting process without requiring
+        office staff to reconstruct the same information.
+
       </p>
 
     </article>
@@ -691,17 +998,19 @@
       <span>04</span>
 
       <h3>
-        Scalable<br>
-        System
+        Built-in<br>
+        Verification
       </h3>
 
       <p>
-        New equipment and failure scenarios
-        can be added as the maintenance
-        knowledge base grows.
+
+        Maintenance details and photo evidence can
+        be reviewed together before submission.
+
       </p>
 
     </article>
+
 
   </div>
 
@@ -710,50 +1019,92 @@
 
 
 <!-- =========================================================
-     08 NEXT ITERATION
+     10 SCALE / FUTURE
 ========================================================= -->
 
 <section class="maint-section maint-future">
 
   <p class="maint-section-number">
-    08 / NEXT ITERATION
+    10 / SCALE & NEXT ITERATION
   </p>
 
   <h2>
-    From troubleshooting tool<br>
-    to maintenance platform.
+    Designed for<br>
+    <span class="maint-orange-text">~1,800 maintenance sites.</span>
   </h2>
+
+
+  <p class="maint-large-text maint-scale-copy">
+
+    At this operational scale, reducing even one repetitive
+    administrative step per site can create meaningful
+    workflow impact.
+
+  </p>
 
 
   <div class="maint-future-flow">
 
+
     <div>
+
       <span>CURRENT</span>
-      <strong>Rule-based<br>Troubleshooting</strong>
+
+      <strong>
+        Digital Maintenance<br>
+        Workflow
+      </strong>
+
     </div>
+
 
     <b>→</b>
 
+
     <div>
+
       <span>NEXT</span>
-      <strong>Maintenance<br>Database</strong>
+
+      <strong>
+        Central Maintenance<br>
+        Database
+      </strong>
+
     </div>
 
+
     <b>→</b>
+
 
     <div>
+
       <span>FUTURE</span>
-      <strong>Fault History<br>+ Analytics</strong>
+
+      <strong>
+        Fault History<br>
+        + Site Analytics
+      </strong>
+
     </div>
 
+
     <b>→</b>
+
 
     <div class="maint-future-final">
+
       <span>SCALE</span>
-      <strong>Predictive<br>Maintenance</strong>
+
+      <strong>
+        Predictive<br>
+        Maintenance
+      </strong>
+
     </div>
 
+
   </div>
+
 
 
   <div class="maint-bottom-line">
@@ -761,9 +1112,12 @@
     <span>PRODUCT VISION</span>
 
     <p>
-      Connect troubleshooting results with maintenance
-      records, fault history, equipment data and analytics
-      to identify recurring failure patterns across sites.
+
+      Transform field reporting from a repetitive
+      communication task into structured operational
+      data that can support maintenance history,
+      equipment analysis and future decision-making.
+
     </p>
 
   </div>
@@ -779,7 +1133,7 @@
 <footer class="maint-footer">
 
   <span>
-    007 / AVIATION OBSTRUCTION LIGHT MAINTENANCE
+    007 / AVIATION OBSTRUCTION LIGHT MAINTENANCE OPERATIONS
   </span>
 
   <a href="index.html">
