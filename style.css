@@ -2554,7 +2554,8 @@ rekha-page .status {
    BEIJING COLOR SYSTEM
    ============================================================ */
 
-.beijing-page {
+.beijing-page,
+.beijing-nav {
   --beijing-red: #e54832;
   --beijing-cream: #f4e8cf;
   --beijing-blue: #78c7e8;
