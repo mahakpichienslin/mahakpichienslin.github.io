@@ -7263,3 +7263,86 @@ rekha-page .status {
   }
 
 }
+
+/* ============================================================
+   PROJECT 007 — REVIEW VISUAL
+   ============================================================ */
+
+.maint-review-visual {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+
+  gap: 55px;
+  align-items: center;
+
+  margin-top: 80px;
+}
+
+
+/* COPY */
+
+.maint-review-copy > span {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: var(--maint-orange);
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+}
+
+.maint-review-copy h3 {
+  margin: 0 0 22px;
+
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.08;
+
+  letter-spacing: -0.04em;
+}
+
+.maint-review-copy p {
+  color: #8d837d;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* IMAGE */
+
+.maint-review-image {
+  position: relative;
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 107, 44, 0.25);
+  border-radius: 20px;
+
+  background: #090706;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.30),
+    0 0 30px rgba(255, 107, 44, 0.05);
+}
+
+.maint-review-image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .maint-review-visual {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+}
