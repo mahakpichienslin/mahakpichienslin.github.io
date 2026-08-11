@@ -7346,3 +7346,144 @@ rekha-page .status {
   }
 
 }
+
+/* ============================================================
+   PROJECT 007 — FINAL REPORT SHOWCASE
+   ============================================================ */
+
+.maint-report-showcase {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+
+  gap: 60px;
+  align-items: center;
+
+  margin-top: 90px;
+}
+
+
+/* REPORT IMAGE */
+
+.maint-report-image {
+  position: relative;
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 107, 44, 0.25);
+  border-radius: 20px;
+
+  background: #090706;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.30),
+    0 0 35px rgba(255, 107, 44, 0.05);
+}
+
+.maint-report-image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+
+/* COPY */
+
+.maint-report-copy > span {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: var(--maint-orange);
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+}
+
+.maint-report-copy h3 {
+  margin: 0 0 24px;
+
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.08;
+
+  letter-spacing: -0.04em;
+}
+
+.maint-report-copy p {
+  color: #8d837d;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* MINI FLOW */
+
+.maint-report-path {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 35px;
+}
+
+.maint-report-path > div {
+  flex: 1;
+
+  padding: 14px;
+
+  border: 1px solid #29231f;
+  border-radius: 10px;
+
+  background: #090706;
+}
+
+.maint-report-path small {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--maint-orange);
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.maint-report-path strong {
+  font-size: 11px;
+}
+
+.maint-report-path > span {
+  color: var(--maint-orange);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .maint-report-showcase {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+}
+
+
+@media (max-width: 520px) {
+
+  .maint-report-path {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .maint-report-path > span {
+    text-align: center;
+
+    transform: rotate(90deg);
+  }
+
+}
